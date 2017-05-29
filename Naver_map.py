@@ -4,7 +4,7 @@ import urllib.request
 import xml.etree.ElementTree as etree
 import webbrowser
 
-def main():
+def Set_map():
     client_id = "SmUpG9NpShByzd1X1LbU"
     client_secret = "AcoyKCqpsb"
     encText = urllib.parse.quote("화정4동")
@@ -46,4 +46,4 @@ def main():
 
 
 
-main()
+Set_map()
