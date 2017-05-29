@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <result>
-    <userquery><![CDATA[화정4동]]></userquery>
+    <userquery><![CDATA[화개1로 33]]></userquery>
     <total>1</total>
     <items>
         <item>
-            <address><![CDATA[광주광역시 서구 화정4동 ]]></address>
+            <address><![CDATA[광주광역시 서구 화개1로  33 호반리젠시빌아파트]]></address>
             <addrdetail>
                 <country><![CDATA[대한민국]]></country>
                 <sido><![CDATA[광주광역시]]></sido>
                 <sigugun><![CDATA[서구]]></sigugun>
-                <dongmyun><![CDATA[화정4동]]></dongmyun>
-                <rest><![CDATA[]]></rest>
+                <dongmyun><![CDATA[화개1로]]></dongmyun>
+                <rest><![CDATA[ 33 호반리젠시빌아파트]]></rest>
             </addrdetail>
-            <isRoadAddress>false</isRoadAddress>
+            <isRoadAddress>true</isRoadAddress>
             <point>
-                <x>126.8737880</x>
-                <y>35.1418240</y>
+                <x>126.8547414</x>
+                <y>35.1267168</y>
             </point>
         </item>
     </items>

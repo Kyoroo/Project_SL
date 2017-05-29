@@ -7,7 +7,8 @@ import webbrowser
 def Set_map():
     client_id = "SmUpG9NpShByzd1X1LbU"
     client_secret = "AcoyKCqpsb"
-    encText = urllib.parse.quote("화정4동")
+    position = "화개1로 33"
+    encText = urllib.parse.quote(position)
     # url = "https://openapi.naver.com/v1/map/geocode?query=" + encText  # json 결과
     url = "https://openapi.naver.com/v1/map/geocode.xml?query=" + encText # xml 결과
     request = urllib.request.Request(url)
