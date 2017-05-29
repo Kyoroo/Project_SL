@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<result>
+    <userquery><![CDATA[화정4동]]></userquery>
+    <total>1</total>
+    <items>
+        <item>
+            <address><![CDATA[광주광역시 서구 화정4동 ]]></address>
+            <addrdetail>
+                <country><![CDATA[대한민국]]></country>
+                <sido><![CDATA[광주광역시]]></sido>
+                <sigugun><![CDATA[서구]]></sigugun>
+                <dongmyun><![CDATA[화정4동]]></dongmyun>
+                <rest><![CDATA[]]></rest>
+            </addrdetail>
+            <isRoadAddress>false</isRoadAddress>
+            <point>
+                <x>126.8737880</x>
+                <y>35.1418240</y>
+            </point>
+        </item>
+    </items>
+</result>
