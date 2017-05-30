@@ -1,13 +1,13 @@
 import os
 import sys
 import urllib.request
-import xml.etree.ElementTree as etree
+import xml.etree.ElementTree as ET
 import webbrowser
 
 def Set_map():
     client_id = "SmUpG9NpShByzd1X1LbU"
     client_secret = "AcoyKCqpsb"
-    address = "화개1로 33"    #주소입력
+    address = "도봉구 방학2동 659-35"    #주소입력
     encText = urllib.parse.quote(address)
     # url = "https://openapi.naver.com/v1/map/geocode?query=" + encText  # json 결과
     url = "https://openapi.naver.com/v1/map/geocode.xml?query=" + encText # xml 결과
@@ -22,7 +22,7 @@ def Set_map():
         f.write(response_body)
         f.close()
 
-        tree = etree.parse("test.xml")
+        tree = ET.parse("test.xml")
         root = tree.getroot()
 
         for x_point in root.iter("x"):
@@ -30,15 +30,16 @@ def Set_map():
         for y_point in root.iter("y"):
             print(y_point.text)
 
-        level = 13
+        level = 10
         width = 600
         height = 600
-        url_png = "https://openapi.naver.com/v1/map/staticmap.bin?clientId=" + client_id + "&url=file://c&crs=EPSG:4326&center=" + x_point.text + "," + y_point.text + "&level=" + str(level) + "&w=" + str(width) + "&h=" + str(height) + "&baselayer=satellite&overlayers=anno_satellite&format=jpeg"
+        url_png = "https://openapi.naver.com/v1/map/staticmap.bin?clientId=" + client_id + "&url=file://c&crs=EPSG:4326&center=" + x_point.text + "," + y_point.text + "&level=" + str(level) + "&w=" + str(width) + "&h=" + str(height) + "&baselayer=default&format=jpeg"
         request = urllib.request.Request(url_png)
         request.add_header("X-Naver-Client-Id", client_id)
         request.add_header("X-Naver-Client-Secret", client_secret)
         response = urllib.request.urlopen(request)
         rescode = response.getcode()
+
         if (rescode == 200):
             webbrowser.open_new(url_png)
         else:
